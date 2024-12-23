@@ -1,0 +1,32 @@
+// how to iterate through the digits of a number in JS
+
+let num = 12345;
+
+//convert to string
+let numStr = num.toString();
+
+// iterate through it
+for(let i = 0; i < numStr.length; i++){
+    console.log(numStr.charAt(i)); 
+}
+
+//convert back to digit
+for(let i = 0; i <numStr.length; i++){
+    let digit = parseInt(numStr.charAt(i), 10);
+    console.log(digit);
+}
+
+
+
+// ALTERNATE METHOD - use array
+
+let num1 = 12345;
+
+let digits = num1a.toString().split('');
+
+//iterate through the array
+digit.forEach(digit => {
+    console.log(digit);
+ //   console.log(parseInt(digit, 10)); //convert back to # if needed
+});
+
