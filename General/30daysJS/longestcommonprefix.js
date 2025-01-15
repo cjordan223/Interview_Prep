@@ -25,7 +25,7 @@ var longestCommonPrefix = function(strs) {
     let last = strs[strs.length - 1];
     let commonPrefix = "";
 
-    for()
+    for
 
 
 };
