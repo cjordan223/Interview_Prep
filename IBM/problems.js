@@ -1,26 +1,45 @@
+// 1. Odd/Even Summation Problem
 function oddEvenSum(arrayA, arrayB, flag) {
-  let diffs = 0;
 
-  // Loop through all indices
-  for (let i = 0; i < arrayA.length; i++) {
-    // Check if the index matches the flag
-    if ((flag === "even" && i % 2 === 0) || (flag === "odd" && i % 2 !== 0)) {
-      let value = arrayA[i] - arrayB[i];
-      diffs += value;
-    }
-  }
 
-  // Determine the result AFTER calculating the total sum
-  if (diffs > 0) {
-    console.log(diffs);
-    return "PLAYER A WINS";
-  } else if (diffs < 0) {
-    console.log(diffs);
-    return "PLAYER B WINS";
-  } else {
-    console.log(diffs);
-    return "TIE";
-  }
+  // Calculate the sum of differences (arrayA[i] - arrayB[i]) for indices matching the flag ('odd' or 'even').
+  // Return "Player A" if sum > 0, "Player B" if sum < 0, or "Tie" if sum === 0.
+
+//   Problem Understanding
+
+// You have two arrays, arrayA and arrayB, and a flag that can be either "odd" or "even". The task is to:
+
+//     Calculate the sum of the differences between the elements of arrayA and arrayB at indices matching the flag (odd or even indices).
+//     Return:
+//         "Player A" if the total sum is greater than 0.
+//         "Player B" if the total sum is less than 0.
+//         "Tie" if the total sum equals 0.
+// }
+
+
+let diffs = 0;
+
+for(let i = 0; i < arrayA.length; i ++){
+  if((flag === 'even' && i % 2 === 0) || (flag === 'odd' && i % 2 !== 0)){
+  let value = arrayA[i] - arrayB[i];
+  diffs += value;
+}
+
+if(diffs > 0){
+  console.log(diffs);
+  return "PLAYER A WINS"
+}
+else if(diffs < 0){
+  console.log(diffs);
+  return "PLAYER B WINS"
+}
+else{
+  console.log(diffs);
+  return "TIE"
+}
+  
+}
+
 }
 
 
